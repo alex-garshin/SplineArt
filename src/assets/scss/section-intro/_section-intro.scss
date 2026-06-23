@@ -1,0 +1,76 @@
+@use '../common' as *;
+
+.section-intro {
+  padding-block: 48px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .section-intro {
+    padding-block: 64px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .section-intro {
+    padding-block: 80px;
+  }
+}
+
+.section-intro__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: $breakpoint-lg) {
+  .section-intro__container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+}
+
+.section-intro__title {
+  flex: 1;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  color: $color-text;
+}
+
+@media (min-width: $breakpoint-md) {
+  .section-intro__title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .section-intro__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+.section-intro__text {
+  flex: 1;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-text-muted;
+}
+
+@media (min-width: $breakpoint-md) {
+  .section-intro__text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .section-intro__text {
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 520px;
+    margin-left: auto;
+  }
+}
