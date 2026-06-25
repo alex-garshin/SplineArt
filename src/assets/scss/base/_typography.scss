@@ -9,15 +9,15 @@ body {
   flex-direction: column;
   min-height: 100%;
   font-family: $font-family-base;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
   color: $color-text;
   background-color: $color-bg;
 }
 
-@media (min-width: $breakpoint-md) {
+@media (max-width: $breakpoint-md-max) {
   body {
-    font-size: $font-size-base;
-    line-height: $line-height-base;
+    font-size: 14px;
+    line-height: 22px;
   }
 }

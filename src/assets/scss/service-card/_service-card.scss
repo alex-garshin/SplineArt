@@ -1,0 +1,103 @@
+@use '../common' as *;
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 420px;
+  padding: 28px;
+  border: 1px solid rgba($color-purple-light, 0.25);
+  border-radius: 16px;
+  background-color: $color-black;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 90%;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-card {
+    min-height: 400px;
+    background-size: auto 85%;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-card {
+    min-height: 360px;
+    padding: 24px;
+    background-position: right bottom;
+    background-size: 220px auto;
+  }
+}
+
+.service-card--1 {
+  background-image: url('@/images/digital/1.png');
+}
+
+.service-card--2 {
+  background-image: url('@/images/digital/2.png');
+}
+
+.service-card--3 {
+  background-image: url('@/images/digital/3.png');
+}
+
+.service-card--4 {
+  background-image: url('@/images/digital/4.png');
+}
+
+.service-card__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 520px;
+  min-width: 0;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-card__content {
+    max-width: 100%;
+  }
+}
+
+.service-card__number {
+  font-size: 30px;
+  line-height: 18px;
+  color: $color-text-muted;
+}
+
+.service-card__text {
+  font-size: 18px;
+  line-height: 24px;
+  color: $color-text-muted;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-card__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.service-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-card__tag {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background-color: rgba($color-white, 0.2);
+  font-size: 16px;
+  line-height: 14px;
+  color: $color-text;
+}

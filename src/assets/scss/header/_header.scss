@@ -2,18 +2,18 @@
 
 .header {
   flex-shrink: 0;
-  padding-block: 16px;
+  padding-block: 24px;
 }
 
-@media (min-width: $breakpoint-md) {
+@media (max-width: $breakpoint-lg-max) {
   .header {
     padding-block: 20px;
   }
 }
 
-@media (min-width: $breakpoint-lg) {
+@media (max-width: $breakpoint-md-max) {
   .header {
-    padding-block: 24px;
+    padding-block: 16px;
   }
 }
 
@@ -31,43 +31,24 @@
 }
 
 .header__logo-caption {
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: $color-text-muted;
 }
 
-.header__logo-title {
-  font-size: 24px;
-  line-height: 29px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: $color-text;
-}
-
-@media (min-width: $breakpoint-md) {
+@media (max-width: $breakpoint-lg-max) {
   .header__logo-caption {
     font-size: 11px;
     line-height: 13px;
   }
-
-  .header__logo-title {
-    font-size: 28px;
-    line-height: 34px;
-  }
 }
 
-@media (min-width: $breakpoint-lg) {
+@media (max-width: $breakpoint-md-max) {
   .header__logo-caption {
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-  .header__logo-title {
-    font-size: 34px;
-    line-height: 41px;
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 
@@ -108,26 +89,26 @@
   border: 0;
   background: none;
   cursor: pointer;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 1px;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: $color-text;
   transition: color $transition-base;
 }
 
-@media (min-width: $breakpoint-md) {
+@media (max-width: $breakpoint-lg-max) {
   .header__menu {
     font-size: 22px;
     line-height: 26px;
-    letter-spacing: 2px;
   }
 }
 
-@media (min-width: $breakpoint-lg) {
+@media (max-width: $breakpoint-md-max) {
   .header__menu {
-    font-size: 26px;
-    line-height: 31px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1px;
   }
 }
 

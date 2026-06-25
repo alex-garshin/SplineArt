@@ -1,0 +1,84 @@
+@use '../common' as *;
+
+.services {
+  padding-block: 80px 100px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .services {
+    padding-block: 64px 80px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .services {
+    padding-block: 48px 64px;
+  }
+}
+
+.services__intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .services__intro {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .services__intro {
+    margin-bottom: 40px;
+  }
+}
+
+.services__title {
+  flex: 1;
+}
+
+.services__lead {
+  flex: 1;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-text-muted;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .services__lead {
+    font-size: 15px;
+    line-height: 24px;
+    max-width: none;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .services__lead {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
