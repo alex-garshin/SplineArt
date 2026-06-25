@@ -177,9 +177,10 @@
 }
 
 .btn--primary:hover {
-  border-color: $color-hover-pink;
+  border-color: $color-hover-purple;
   background-color: $color-hover-purple;
-  color: $color-hover-pink;
+  box-shadow: 0 0 16px rgba(183, 158, 216, 0.45), 0 0 32px rgba(183, 158, 216, 0.2);
+  transition: border-color $transition-base, background-color $transition-base, box-shadow $transition-base;
 }
 
 .btn--outline {
@@ -219,7 +220,8 @@
 
 .btn--glow:hover {
   border-color: $color-glow;
-  background-color: rgba($color-glow, 0.08);
+  background-color: $color-hover-purple;
+  transition: background-color $transition-base, color $transition-base, box-shadow $transition-base;
   color: $color-white;
   box-shadow:
     0 0 20px rgba($color-glow, 0.55),

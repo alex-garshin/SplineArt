@@ -16,6 +16,11 @@
   background-size: auto 90%;
 }
 
+.service-card:hover {
+  box-shadow: 0 0 16px rgba(183, 158, 216, 0.45), 0 0 32px rgba(183, 158, 216, 0.2);
+  transition: box-shadow $transition-base;
+}
+
 @media (max-width: $breakpoint-lg-max) {
   .service-card {
     min-height: 400px;
