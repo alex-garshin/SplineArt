@@ -1,0 +1,55 @@
+@use '../common' as *;
+
+.footer-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid $color-glow-border;
+  border-radius: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  text-decoration: none;
+  transition:
+    border-color $transition-base,
+    box-shadow $transition-base,
+    background-color $transition-base;
+}
+
+.footer-icon.glow-border {
+  box-shadow:
+    0 0 16px rgba($color-glow, 0.45),
+    0 0 32px rgba($color-glow, 0.2);
+}
+
+.footer-icon:hover {
+  border-color: $color-glow;
+  background-color: rgba($color-glow, 0.08);
+  box-shadow:
+    0 0 20px rgba($color-glow, 0.55),
+    0 0 40px rgba($color-glow, 0.25);
+}
+
+.footer-icon--services {
+  background-image: url('@/images/footer/uslugi.png');
+}
+
+.footer-icon--company {
+  background-image: url('@/images/footer/company.png');
+}
+
+.footer-icon--information {
+  background-image: url('@/images/footer/information.png');
+}
+
+.footer-icon--telegram {
+  background-image: url('@/images/social/tg.png');
+}
+
+.footer-icon--max {
+  background-image: url('@/images/social/max.png');
+}

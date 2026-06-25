@@ -202,3 +202,26 @@
   border-color: $color-hover-pink;
   color: $color-hover-pink;
 }
+
+.glow-border {
+  border-color: $color-glow-border;
+  box-shadow:
+    0 0 16px rgba($color-glow, 0.45),
+    0 0 32px rgba($color-glow, 0.2);
+}
+
+.btn--glow {
+  min-width: 240px;
+  min-height: 60px;
+  background-color: transparent;
+  color: $color-white;
+}
+
+.btn--glow:hover {
+  border-color: $color-glow;
+  background-color: rgba($color-glow, 0.08);
+  color: $color-white;
+  box-shadow:
+    0 0 20px rgba($color-glow, 0.55),
+    0 0 40px rgba($color-glow, 0.25);
+}

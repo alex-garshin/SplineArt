@@ -7,6 +7,8 @@ $color-purple-light: #9861b1;
 $color-hover-pink: #dd91ff;
 $color-hover-purple: #b171ce;
 $color-bg-purple-light: #f4f2fe;
+$color-glow-border: #997dbd;
+$color-glow: #b79ed8;
 
 // Semantic
 $color-bg: $color-black;
@@ -35,6 +37,7 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-md-max: 767px;
 $breakpoint-lg-max: 1023px;
+$breakpoint-footer-max: 1279px;
 
 // Transitions
 $transition-base: 0.25s ease;
