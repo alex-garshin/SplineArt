@@ -44,26 +44,14 @@
 
 .services__lead {
   flex: 1;
-  font-size: 18px;
-  line-height: 26px;
-  color: $color-text-muted;
   max-width: 520px;
   margin-left: auto;
 }
 
 @media (max-width: $breakpoint-lg-max) {
   .services__lead {
-    font-size: 15px;
-    line-height: 24px;
     max-width: none;
     margin-left: 0;
-  }
-}
-
-@media (max-width: $breakpoint-md-max) {
-  .services__lead {
-    font-size: 14px;
-    line-height: 22px;
   }
 }
 

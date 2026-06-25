@@ -71,19 +71,6 @@
   color: $color-text-muted;
 }
 
-.service-card__text {
-  font-size: 18px;
-  line-height: 24px;
-  color: $color-text-muted;
-}
-
-@media (max-width: $breakpoint-md-max) {
-  .service-card__text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
 .service-card__tags {
   display: flex;
   flex-wrap: wrap;

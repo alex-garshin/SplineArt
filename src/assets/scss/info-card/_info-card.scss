@@ -26,16 +26,3 @@
   border-color: $color-hover-pink;
   background-color: rgba($color-purple, 0.12);
 }
-
-.info-card__text {
-  font-size: 13px;
-  line-height: 18px;
-  color: $color-text-muted;
-}
-
-@media (max-width: $breakpoint-md-max) {
-  .info-card__text {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}

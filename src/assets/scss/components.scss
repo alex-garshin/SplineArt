@@ -77,6 +77,64 @@
   color: $color-accent-alt;
 }
 
+.text {
+  color: $color-text-muted;
+
+  p {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+
+  p + p {
+    margin-top: 12px;
+  }
+}
+
+.text--md {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .text--md {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .text--md {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.text--sm {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .text--sm {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.text--xs {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .text--xs {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
