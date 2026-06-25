@@ -1,0 +1,157 @@
+@use '../common' as *;
+
+.ai {
+  padding-block: 80px 100px;
+  background-color: $color-bg-light;
+  color: $color-text-on-light;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .ai {
+    padding-block: 64px 80px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .ai {
+    padding-block: 48px 64px;
+  }
+}
+
+.ai .title {
+  color: $color-text-on-light;
+}
+
+.ai .text {
+  color: $color-text-muted;
+}
+
+.ai__header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .ai__header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .ai__header {
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+}
+
+.ai__title {
+  max-width: 600px;
+}
+
+.ai__lead {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 48px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .ai__lead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+.ai__text {
+  flex: 1;
+  max-width: 720px;
+}
+
+.ai__action {
+  flex-shrink: 0;
+}
+
+.ai__visual {
+  position: relative;
+  max-width: 1200px;
+  min-height: 520px;
+  margin-inline: auto;
+}
+
+.ai__visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('@/images/ai/ai.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 90%;
+  pointer-events: none;
+}
+
+.ai__features {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ai__feature {
+  position: absolute;
+  width: 340px;
+}
+
+.ai__feature:nth-child(1) {
+  top: 10%;
+  left: 5%;
+}
+
+.ai__feature:nth-child(2) {
+  bottom: 8%;
+  left: 0;
+}
+
+.ai__feature:nth-child(3) {
+  top: 5%;
+  right: 0;
+}
+
+.ai__feature:nth-child(4) {
+  right: 0;
+  bottom: 10%;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .ai__visual {
+    max-width: none;
+    min-height: 0;
+  }
+
+  .ai__visual::before {
+    display: none;
+  }
+
+  .ai__features {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .ai__feature {
+    position: static;
+    width: auto;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .ai__features {
+    grid-template-columns: 1fr;
+  }
+}

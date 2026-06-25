@@ -1,0 +1,73 @@
+@use '../common' as *;
+
+.ai-feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  border: 1px solid $color-border-light;
+  border-radius: 20px;
+  background-color: $color-bg-light;
+  box-shadow: 0 0 10px rgba($color-black, 0.08);
+  color: $color-text-on-light;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .ai-feature-card {
+    gap: 12px;
+    padding: 16px 20px;
+  }
+}
+
+.ai-feature-card .title {
+  color: $color-text-on-light;
+}
+
+.ai-feature-card .text {
+  color: $color-text-muted;
+}
+
+.ai-feature-card__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.ai-feature-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ai-feature-card__title {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .ai-feature-card__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.ai-feature-card--assistants .ai-feature-card__icon {
+  background-image: url('@/images/ai/icon-1.png');
+}
+
+.ai-feature-card--documents .ai-feature-card__icon {
+  background-image: url('@/images/ai/icon-3.png');
+}
+
+.ai-feature-card--analytics .ai-feature-card__icon {
+  background-image: url('@/images/ai/icon-2.png');
+}
+
+.ai-feature-card--automation .ai-feature-card__icon {
+  background-image: url('@/images/ai/icon-4.png');
+}

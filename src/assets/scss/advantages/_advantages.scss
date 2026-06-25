@@ -1,0 +1,103 @@
+@use '../common' as *;
+
+.advantages {
+  padding-block: 80px 100px;
+  background-color: $color-bg-light;
+  color: $color-text-on-light;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .advantages {
+    padding-block: 64px 80px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .advantages {
+    padding-block: 48px 64px;
+  }
+}
+
+.advantages .title {
+  color: $color-text-on-light;
+  max-width: 500px;
+}
+
+.advantages .text {
+  color: $color-text-purple;
+}
+
+.advantages__header {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .advantages__header {
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.advantages__intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .advantages__intro {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.advantages__text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.advantages__note {
+  flex: 1;
+  max-width: 640px;
+  padding: 24px 28px;
+  border: 1px solid $color-border-light;
+  border-radius: 16px;
+  background-color: $color-bg-light;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .advantages__note {
+    max-width: none;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .advantages__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .advantages__list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.advantages__item {
+  min-width: 0;
+}

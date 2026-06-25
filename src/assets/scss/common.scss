@@ -11,8 +11,15 @@ $color-hover-purple: #b171ce;
 $color-bg: $color-black;
 $color-text: $color-white;
 $color-text-muted: $color-gray;
+$color-text-purple: #59555f;
 $color-accent: $color-purple;
 $color-accent-alt: $color-purple-light;
+
+// Light surfaces
+$color-bg-light: $color-white;
+$color-surface-light: #f5f4f7;
+$color-text-on-light: $color-black;
+$color-border-light: #e6e4e8;
 
 // Typography
 $font-family-base: 'Century Gothic', system-ui, sans-serif;
