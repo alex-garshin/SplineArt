@@ -145,7 +145,7 @@
   border-radius: 999px;
   background: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 17px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -171,8 +171,8 @@
 }
 
 .btn--primary {
-  border-color: $color-purple;
-  background-color: $color-purple;
+  border-color: $color-purple-light;
+  background-color: $color-purple-light;
   color: $color-white;
 }
 
