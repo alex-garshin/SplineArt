@@ -17,6 +17,7 @@ $color-text-muted: $color-gray;
 $color-text-purple: #59555f;
 $color-accent: $color-purple;
 $color-accent-alt: $color-purple-light;
+$color-text-dark: #312d2e;
 
 // Light surfaces
 $color-bg-light: $color-white;
@@ -26,8 +27,10 @@ $color-border-light: #e6e4e8;
 
 // Typography
 $font-family-base: 'Century Gothic', system-ui, sans-serif;
+$font-family-gill-sans: 'Gill Sans', system-ui, sans-serif;
+$font-family-myriad-pro: 'Myriad Pro', system-ui, sans-serif;
 $font-size-base: 16px;
-$line-height-base: 24px;
+$line-height-base: 1.5;
 
 // Layout
 $container-max-width: 1460px;

@@ -14,6 +14,10 @@
   background-repeat: no-repeat;
   background-position: right center;
   background-size: auto 90%;
+
+  .title {
+    color: $color-text;
+  }
 }
 
 .service-card:hover {
@@ -72,7 +76,7 @@
 
 .service-card__number {
   font-size: 30px;
-  line-height: 18px;
+  line-height: 1.2;
   color: $color-text-muted;
 }
 
@@ -90,6 +94,6 @@
   border-radius: 999px;
   background-color: rgba($color-white, 0.2);
   font-size: 16px;
-  line-height: 14px;
+  line-height: 1.2;
   color: $color-text;
 }

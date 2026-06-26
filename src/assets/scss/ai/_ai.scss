@@ -4,6 +4,12 @@
   padding-block: 80px 100px;
   background-color: $color-bg-light;
   color: $color-text-on-light;
+
+  .text {
+    color: $color-text-purple;
+    font-size: 18px;
+    line-height: 1.44;
+  }
 }
 
 @media (max-width: $breakpoint-lg-max) {
@@ -17,17 +23,6 @@
     padding-block: 48px 64px;
   }
 }
-
-.ai .title {
-  color: $color-text-on-light;
-}
-
-.ai .text {
-  color: $color-text-purple;
-  font-size: 18px;
-  line-height: 26px;
-}
-
 .ai__header {
   display: flex;
   flex-direction: column;

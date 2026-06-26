@@ -3,6 +3,10 @@
 .header {
   flex-shrink: 0;
   padding-block: 24px;
+
+  .title {
+    color: $color-text;
+  }
 }
 
 @media (max-width: $breakpoint-lg-max) {
@@ -32,7 +36,7 @@
 
 .header__logo-caption {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: $color-text-muted;
@@ -41,14 +45,14 @@
 @media (max-width: $breakpoint-lg-max) {
   .header__logo-caption {
     font-size: 11px;
-    line-height: 13px;
+    line-height: 1.18;
   }
 }
 
 @media (max-width: $breakpoint-md-max) {
   .header__logo-caption {
     font-size: 10px;
-    line-height: 12px;
+    line-height: 1.2;
   }
 }
 
@@ -65,7 +69,7 @@
   background: none;
   cursor: pointer;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: $color-text;
@@ -90,7 +94,7 @@
   background: none;
   cursor: pointer;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $color-text;
@@ -100,14 +104,14 @@
 @media (max-width: $breakpoint-lg-max) {
   .header__menu {
     font-size: 22px;
-    line-height: 26px;
+    line-height: 1.18;
   }
 }
 
 @media (max-width: $breakpoint-md-max) {
   .header__menu {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.22;
     letter-spacing: 1px;
   }
 }

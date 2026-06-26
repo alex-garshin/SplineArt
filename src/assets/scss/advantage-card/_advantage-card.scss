@@ -16,6 +16,12 @@
   background-size: auto 75%;
   color: $color-text-on-light;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  .text {
+    color: $color-text-purple;
+    font-size: 14px;
+    line-height: 1.57;
+  }
 }
 
 @media (max-width: $breakpoint-lg-max) {
@@ -32,17 +38,6 @@
     background-size: 180px auto;
   }
 }
-
-.advantage-card .title {
-  color: $color-text-on-light;
-}
-
-.advantage-card .text {
-  color: $color-text-purple;
-  font-size: 14px;
-  line-height: 22px;
-}
-
 .advantage-card__content {
   position: relative;
   z-index: 1;
@@ -63,7 +58,7 @@
 .advantage-card__number {
   font-size: 22px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 1.2;
   color: $color-purple;
 }
 

@@ -10,6 +10,10 @@
   background-color: $color-bg-light;
   box-shadow: 0 0 10px rgba($color-black, 0.08);
   color: $color-text-on-light;
+
+  .text {
+    color: $color-text-muted;
+  }
 }
 
 @media (max-width: $breakpoint-md-max) {
@@ -18,15 +22,6 @@
     padding: 16px 20px;
   }
 }
-
-.ai-feature-card .title {
-  color: $color-text-on-light;
-}
-
-.ai-feature-card .text {
-  color: $color-text-muted;
-}
-
 .ai-feature-card__icon {
   flex-shrink: 0;
   width: 60px;
@@ -49,13 +44,13 @@
 
 .ai-feature-card__title {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
 }
 
 @media (max-width: $breakpoint-md-max) {
   .ai-feature-card__title {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.25;
   }
 }
 

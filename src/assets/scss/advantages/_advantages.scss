@@ -4,6 +4,14 @@
   padding-block: 80px 100px;
   background-color: $color-bg-light;
   color: $color-text-on-light;
+
+  .title {
+    max-width: 500px;
+  }
+
+  .text {
+    color: $color-text-purple;
+  }
 }
 
 @media (max-width: $breakpoint-lg-max) {
@@ -16,15 +24,6 @@
   .advantages {
     padding-block: 48px 64px;
   }
-}
-
-.advantages .title {
-  color: $color-text-on-light;
-  max-width: 500px;
-}
-
-.advantages .text {
-  color: $color-text-purple;
 }
 
 .advantages__header {

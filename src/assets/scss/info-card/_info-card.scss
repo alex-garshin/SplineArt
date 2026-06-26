@@ -13,6 +13,10 @@
   transition:
     border-color $transition-base,
     background-color $transition-base;
+
+  .title {
+    color: $color-text;
+  }
 }
 
 @media (max-width: $breakpoint-md-max) {
