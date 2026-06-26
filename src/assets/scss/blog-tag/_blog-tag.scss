@@ -1,0 +1,46 @@
+@use '../common' as *;
+
+.blog-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid rgba($color-purple-light, 0.5);
+  border-radius: 999px;
+  background: linear-gradient(to top, #e8def5, #ffffff);
+  font-size: 16px;
+  line-height: 1.2;
+  color: $color-accent-alt;
+  text-decoration: none;
+  transition:
+    border-color $transition-base,
+    color $transition-base;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-tag {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.blog-tag:hover {
+  border-color: $color-purple-light;
+  color: $color-purple;
+}
+
+.blog-tag:focus-visible {
+  outline: 2px solid $color-hover-pink;
+  outline-offset: 4px;
+}
+
+.blog-tag--active {
+  border-color: $color-purple-light;
+  background: $color-purple-light;
+  color: $color-white;
+}
+
+.blog-tag--active:hover {
+  border-color: $color-hover-purple;
+  background: $color-hover-purple;
+  color: $color-white;
+}

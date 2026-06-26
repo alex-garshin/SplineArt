@@ -1,0 +1,86 @@
+@use '../common' as *;
+
+.blog-pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-pagination__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 8px 12px;
+  border: 1px solid rgba($color-purple-light, 0.5);
+  border-radius: 8px;
+  background: linear-gradient(to top, #e8def5, #ffffff);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 500;
+  color: $color-text-dark;
+  text-decoration: none;
+  transition:
+    border-color $transition-base,
+    color $transition-base;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-pagination__link {
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 14px;
+  }
+}
+
+.blog-pagination__link:hover {
+  border-color: $color-purple-light;
+  color: $color-purple;
+}
+
+.blog-pagination__link:focus-visible {
+  outline: 2px solid $color-hover-pink;
+  outline-offset: 4px;
+}
+
+.blog-pagination__link--active {
+  border-color: $color-purple-light;
+  background: $color-purple-light;
+  color: $color-white;
+}
+
+.blog-pagination__link--active:hover {
+  border-color: $color-hover-purple;
+  background: $color-hover-purple;
+  color: $color-white;
+}
+
+.blog-pagination__ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 8px 12px;
+  border: 1px solid rgba($color-purple-light, 0.5);
+  border-radius: 8px;
+  background: linear-gradient(to top, #e8def5, #ffffff);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 500;
+  color: $color-text-dark;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-pagination__ellipsis {
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 14px;
+  }
+}

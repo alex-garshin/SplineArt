@@ -36,6 +36,7 @@ export default defineConfig({
       input: {
         index: resolve(root, 'index.html'),
         privacyPolicy: resolve(pagesDir, 'privacy-policy.html'),
+        blog: resolve(pagesDir, 'blog.html'),
       },
     },
   },

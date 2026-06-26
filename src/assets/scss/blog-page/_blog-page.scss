@@ -1,0 +1,142 @@
+@use '../common' as *;
+
+.blog-page__screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  background-color: $color-bg;
+
+  .title {
+    color: $color-text;
+  }
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog-page__screen {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-page__screen {
+    min-height: 400px;
+  }
+}
+
+.blog-page__hero {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-block: 48px 80px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog-page__hero {
+    padding-block: 40px 64px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-page__hero {
+    padding-block: 32px 48px;
+  }
+}
+
+.blog-page__hero-title {
+  max-width: 1200px;
+  margin-inline: auto;
+  font-size: 70px;
+  font-family: $font-family-gill-sans;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog-page__hero-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-page__hero-title {
+    font-size: 28px;
+    line-height: 1.21;
+    letter-spacing: 1px;
+  }
+}
+
+.blog {
+  padding-block: 72px 100px;
+  background-color: $color-bg-light;
+  color: $color-text-on-light;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog {
+    padding-block: 64px 80px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog {
+    padding-block: 48px 64px;
+  }
+}
+
+.blog__intro {
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog__intro {
+    margin-bottom: 32px;
+  }
+}
+
+.blog__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 48px;
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog__filters {
+    margin-bottom: 32px;
+  }
+}
+
+.blog__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin: 0 0 56px;
+  padding: 0;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.blog__item {
+  min-width: 0;
+}
