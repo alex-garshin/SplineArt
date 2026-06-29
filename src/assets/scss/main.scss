@@ -3,6 +3,7 @@
 @use 'base/typography';
 @use 'common';
 @use 'components';
+@use 'breadcrumbs/breadcrumbs';
 @use 'header/header';
 @use 'footer/footer';
 @use 'footer-icon/footer-icon';
@@ -19,3 +20,5 @@
 @use 'blog-card/blog-card';
 @use 'blog-tag/blog-tag';
 @use 'blog-pagination/blog-pagination';
+@use 'blog-article/blog-article';
+@use 'blog-cta/blog-cta';

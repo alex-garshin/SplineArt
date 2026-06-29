@@ -1,0 +1,29 @@
+@use '../common' as *;
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.breadcrumbs__link {
+  color: $color-accent-alt;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-purple;
+  }
+}
+
+.breadcrumbs__separator {
+  color: $color-text-purple;
+}
+
+.breadcrumbs__current {
+  color: $color-text-purple;
+}

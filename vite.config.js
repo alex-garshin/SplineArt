@@ -37,6 +37,7 @@ export default defineConfig({
         index: resolve(root, 'index.html'),
         privacyPolicy: resolve(pagesDir, 'privacy-policy.html'),
         blog: resolve(pagesDir, 'blog.html'),
+        blogArticle: resolve(pagesDir, 'blog-article.html'),
       },
     },
   },

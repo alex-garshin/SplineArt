@@ -1,0 +1,79 @@
+@use '../common' as *;
+
+.blog-cta {
+  margin-block: 56px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-cta {
+    margin-block: 40px;
+  }
+}
+
+.blog-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: $color-bg;
+  color: $color-text;
+
+  .title {
+    color: $color-text;
+  }
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog-cta__inner {
+    gap: 32px;
+    padding: 40px 48px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+}
+
+.blog-cta__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.blog-cta__title {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.blog-cta__lead {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.63;
+  color: $color-text-muted;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-cta__lead {
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}
+
+.blog-cta__button {
+  flex-shrink: 0;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-cta__button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

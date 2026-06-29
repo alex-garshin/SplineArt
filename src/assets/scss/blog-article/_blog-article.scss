@@ -1,0 +1,161 @@
+@use '../common' as *;
+
+.blog-article {
+  padding-block: 72px 100px;
+  background-color: $color-bg-light;
+  color: $color-text-on-light;
+
+  .text {
+    color: $color-text-purple;
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 0;
+      font-weight: 700;
+      color: $color-text-dark;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    h5 {
+      font-size: 18px;
+      line-height: 1.3;
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-top: 0;
+    }
+
+    h3 + ul,
+    h3 + ol,
+    h4 + ul,
+    h4 + ol,
+    h5 + ul,
+    h5 + ol {
+      margin-top: 0;
+    }
+
+    a {
+      color: $color-accent-alt;
+      text-underline-offset: 3px;
+      transition: color $transition-base;
+
+      &:hover {
+        color: $color-purple;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog-article {
+    padding-block: 64px 80px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-article {
+    padding-block: 48px 64px;
+
+    .text {
+      h3 {
+        font-size: 20px;
+        line-height: 1.3;
+      }
+
+      h4 {
+        font-size: 18px;
+        line-height: 1.33;
+      }
+
+      h5 {
+        font-size: 16px;
+        line-height: 1.38;
+      }
+    }
+  }
+}
+
+.blog-article__intro {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.blog-article__header {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-article__header {
+    margin-bottom: 32px;
+  }
+}
+
+.blog-article__title {
+  margin-bottom: 20px;
+}
+
+.blog-article__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.blog-article__date {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $color-text-purple;
+}
+
+.blog-article__image {
+  display: block;
+  float: right;
+  width: 48%;
+  max-width: 640px;
+  margin: 0 0 24px 40px;
+  border-radius: 12px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .blog-article__image {
+    width: 42%;
+    margin-left: 32px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .blog-article__image {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 24px;
+  }
+}
