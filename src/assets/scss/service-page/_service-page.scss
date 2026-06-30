@@ -1,0 +1,138 @@
+@use '../common' as *;
+
+.service-page__screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  background-color: $color-bg;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  .title {
+    color: $color-text;
+  }
+}
+
+.service-page__screen--development {
+  background-image: url('@/images/headers/develop.png');
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-page__screen {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-page__screen {
+    min-height: 400px;
+  }
+}
+
+.service-page__hero {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-block: 48px 80px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-page__hero {
+    padding-block: 40px 64px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-page__hero {
+    padding-block: 32px 48px;
+  }
+}
+
+.service-page__hero-title {
+  max-width: 1200px;
+  margin-inline: auto;
+  font-size: 70px;
+  font-family: $font-family-gill-sans;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-page__hero-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-page__hero-title {
+    font-size: 28px;
+    line-height: 1.21;
+    letter-spacing: 1px;
+  }
+}
+
+.service-page {
+  padding-block: 40px 100px;
+  overflow-x: clip;
+  background-color: $color-bg-light;
+
+  .text {
+    color: $color-text-purple;
+  }
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-page {
+    padding-block: 32px 80px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-page {
+    padding-block: 24px 64px;
+  }
+}
+
+.service-page__intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-page__intro {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-page__intro {
+    margin-bottom: 40px;
+  }
+}
+
+.service-page__intro-title {
+  flex: 1;
+  max-width: 720px;
+}
+
+.service-page__intro-text {
+  flex: 1;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-page__intro-text {
+    max-width: none;
+    margin-left: 0;
+  }
+}

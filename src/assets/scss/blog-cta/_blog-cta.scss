@@ -77,3 +77,19 @@
     max-width: 320px;
   }
 }
+
+.blog-cta--band {
+  margin-block: 0;
+  background-color: $color-bg;
+  color: $color-text;
+
+  .title {
+    color: $color-text;
+  }
+
+  .blog-cta__inner {
+    padding-inline: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,212 @@
+@use '../common' as *;
+
+.service-contact {
+  margin-top: 80px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-contact {
+    margin-top: 56px;
+    padding-bottom: 64px;
+  }
+}
+
+.service-contact__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: 32px 48px;
+  align-items: start;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-contact__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.service-contact__intro {
+  min-width: 0;
+  max-width: 480px;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-contact__intro {
+    max-width: none;
+  }
+}
+
+.service-contact__title {
+  margin-bottom: 16px;
+}
+
+.service-contact__lead {
+  margin: 0 0 32px;
+  font-size: 18px;
+  line-height: 1.63;
+  color: $color-text-purple;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-contact__lead {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}
+
+.service-contact__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-contact__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.service-contact__benefit-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba($color-purple-light, 0.35);
+  border-radius: 12px;
+  background-color: $color-bg-purple-light;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 38px;
+}
+
+.service-contact__benefit-icon--start {
+  background-image: url('@/images/icon/quick-start.png');
+}
+
+.service-contact__benefit-icon--approach {
+  background-image: url('@/images/icon/indicid-podhod.png');
+}
+
+.service-contact__benefit-icon--privacy {
+  background-image: url('@/images/icon/confidation.png');
+}
+
+.service-contact__benefit-body {
+  min-width: 0;
+  padding-top: 4px;
+}
+
+.service-contact__benefit-title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-contact__benefit-title {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
+
+.service-contact__benefit-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.57;
+  color: $color-text-purple;
+}
+
+.service-contact__form-card {
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid $color-border-light;
+  border-radius: 20px;
+  background-color: $color-bg-light;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-contact__form-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+}
+
+.service-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-contact__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-contact__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-contact__field {
+  min-width: 0;
+}
+
+.service-contact__file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid $color-purple-light;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.29;
+  color: $color-purple-light;
+  cursor: pointer;
+  transition:
+    border-color $transition-base,
+    color $transition-base;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: url('@/images/icon/skrepka.png') center / contain no-repeat;
+  }
+}
+
+.service-contact__file:hover {
+  border-color: $color-purple;
+  color: $color-purple;
+}
+
+.service-contact__file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.service-contact__submit {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 8px;
+}

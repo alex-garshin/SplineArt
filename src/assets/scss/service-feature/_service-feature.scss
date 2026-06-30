@@ -1,0 +1,311 @@
+@use '../common' as *;
+
+.service-feature {
+  margin-top: 80px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-feature {
+    margin-top: 56px;
+  }
+}
+
+.service-feature__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-feature__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .service-feature + .service-feature .service-feature__image,
+  .service-feature + .service-feature + .service-feature + .service-feature .service-feature__image {
+    margin-left: 0;
+  }
+}
+
+.service-feature--reverse {
+  .service-feature__media {
+    order: 2;
+  }
+
+  .service-feature__content {
+    order: 1;
+  }
+}
+
+@media (max-width: $breakpoint-lg-max) {
+  .service-feature--reverse {
+    .service-feature__media,
+    .service-feature__content {
+      order: unset;
+    }
+  }
+}
+
+.service-feature__media {
+  min-width: 0;
+}
+
+.service-feature__image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  max-height: 500px;
+  border-radius: 20px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.service-feature + .service-feature .service-feature__image {
+  max-width: 820px;
+  margin-left: auto;
+}
+
+.service-feature + .service-feature + .service-feature .service-feature__image {
+  max-width: 600px;
+  margin-left: 0;
+}
+
+.service-feature + .service-feature + .service-feature + .service-feature .service-feature__image {
+  max-width: 820px;
+  margin-left: auto;
+}
+
+.service-feature__content {
+  min-width: 0;
+}
+
+.service-feature__icon {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  background-color: $color-bg-purple-light;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-feature__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+    background-size: 22px;
+  }
+}
+
+.service-feature__icon--ai {
+  background-image: url('@/images/icon/intelenges.png');
+}
+
+.service-feature__icon--mobile {
+  background-image: url('@/images/icon/phone.png');
+}
+
+.service-feature__icon--enterprise {
+  background-image: url('@/images/icon/enterprise.png');
+}
+
+.service-feature__title {
+  margin-bottom: 12px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-feature__title {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.service-feature__lead {
+  max-width: 520px;
+  margin: 0 0 40px;
+  font-size: 16px;
+  line-height: 1.63;
+  color: $color-text-purple;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-feature__lead {
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}
+
+.service-feature__list {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-feature__list--cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  .service-feature__item:not(:nth-child(4n + 1)) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -12px;
+      width: 1px;
+      background-color: $color-border-light;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg-max) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: $breakpoint-lg-max) and (min-width: $breakpoint-md) {
+    .service-feature__item:not(:nth-child(4n + 1))::before {
+      content: none;
+    }
+
+    .service-feature__item:nth-child(2n) {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -10px;
+        width: 1px;
+        background-color: $color-border-light;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-md-max) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    .service-feature__item::before,
+    .service-feature__item:nth-child(2n)::before,
+    .service-feature__item:not(:nth-child(4n + 1))::before {
+      content: none;
+    }
+
+    .service-feature__item:not(:first-child) {
+      padding-top: 24px;
+      border-top: 1px solid $color-border-light;
+    }
+  }
+}
+
+.service-feature__list--cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  .service-feature__item:not(:nth-child(3n + 1)) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -12px;
+      width: 1px;
+      background-color: $color-border-light;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg-max) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: $breakpoint-lg-max) and (min-width: $breakpoint-md) {
+    .service-feature__item:not(:nth-child(3n + 1))::before {
+      content: none;
+    }
+
+    .service-feature__item:nth-child(2n) {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -10px;
+        width: 1px;
+        background-color: $color-border-light;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-md-max) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    .service-feature__item::before,
+    .service-feature__item:nth-child(2n)::before,
+    .service-feature__item:not(:nth-child(3n + 1))::before {
+      content: none;
+    }
+
+    .service-feature__item:not(:first-child) {
+      padding-top: 24px;
+      border-top: 1px solid $color-border-light;
+    }
+  }
+}
+
+.service-feature__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.service-feature__number {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $color-purple-light;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-feature__number {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+.service-feature__item-title {
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-feature__item-title {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
+
+.service-feature__item-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.57;
+  color: $color-text-purple;
+}

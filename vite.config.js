@@ -38,6 +38,7 @@ export default defineConfig({
         privacyPolicy: resolve(pagesDir, 'privacy-policy.html'),
         blog: resolve(pagesDir, 'blog.html'),
         blogArticle: resolve(pagesDir, 'blog-article.html'),
+        development: resolve(pagesDir, 'development.html'),
       },
     },
   },
