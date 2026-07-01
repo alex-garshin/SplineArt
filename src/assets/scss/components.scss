@@ -180,8 +180,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 14px 32px;
+  min-height: 60px;
+  padding: 18px 32px;
   border: 1px solid rgba($color-purple-light, 0.35);
   border-radius: 999px;
   background: none;
@@ -199,8 +199,8 @@
 
 @media (max-width: $breakpoint-md-max) {
   .btn {
-    min-height: 48px;
-    padding: 12px 24px;
+    min-height: 60px;
+    padding: 18px 24px;
     font-size: 13px;
     line-height: 1.23;
   }
