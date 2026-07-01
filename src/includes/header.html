@@ -8,14 +8,23 @@
     <nav class="header__nav" aria-label="Навигация">
       <button class="header__lang" type="button">EN</button>
 
-      <button class="header__menu" type="button" aria-label="Открыть меню">
-        <span>Меню</span>
+      <button
+        class="header__menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Открыть меню"
+        data-menu-toggle
+      >
+        <span class="header__menu-text">Меню</span>
         <span class="header__menu-icon" aria-hidden="true">
           <span class="header__menu-line"></span>
           <span class="header__menu-line"></span>
-          <span class="header__menu-line"></span>
+          <span class="header__menu-line header__menu-line--short"></span>
         </span>
       </button>
     </nav>
   </div>
 </header>
+
+{{> menu }}

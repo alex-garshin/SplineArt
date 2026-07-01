@@ -1,6 +1,8 @@
 @use '../common' as *;
 
 .header {
+  position: relative;
+  z-index: 210;
   flex-shrink: 0;
   padding-block: 24px;
 
@@ -72,7 +74,7 @@
   line-height: 1.17;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: $color-text;
+  color: $color-text-muted;
   transition: color $transition-base;
 }
 
@@ -97,7 +99,7 @@
   line-height: 1.19;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: $color-text;
+  color: $color-text-muted;
   transition: color $transition-base;
 }
 
@@ -131,6 +133,7 @@
   justify-content: center;
   gap: 5px;
   width: 24px;
+  height: 16px;
 }
 
 .header__menu-line {
@@ -138,5 +141,28 @@
   width: 100%;
   height: 2px;
   background-color: currentColor;
-  transition: background-color $transition-base;
+  transform-origin: center;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s ease,
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color $transition-base;
+}
+
+.header__menu-line--short {
+  width: 14px;
+}
+
+.header__menu.is-active .header__menu-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__menu.is-active .header__menu-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.header__menu.is-active .header__menu-line--short {
+  width: 100%;
+  transform: translateY(-7px) rotate(-45deg);
 }
