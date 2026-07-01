@@ -39,6 +39,7 @@ export default defineConfig({
         blog: resolve(pagesDir, 'blog.html'),
         blogArticle: resolve(pagesDir, 'blog-article.html'),
         development: resolve(pagesDir, 'development.html'),
+        design: resolve(pagesDir, 'design.html'),
       },
     },
   },

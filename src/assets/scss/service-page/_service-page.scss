@@ -18,6 +18,10 @@
   background-image: url('@/images/headers/develop.png');
 }
 
+.service-page__screen--design {
+  background-image: url('@/images/headers/design.png');
+}
+
 @media (max-width: $breakpoint-lg-max) {
   .service-page__screen {
     min-height: 480px;

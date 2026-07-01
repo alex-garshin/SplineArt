@@ -12,6 +12,10 @@
   }
 }
 
+.service-instruments--band + .service-faq {
+  margin-top: 0;
+}
+
 @media (max-width: $breakpoint-md-max) {
   .service-faq {
     margin-top: 56px;

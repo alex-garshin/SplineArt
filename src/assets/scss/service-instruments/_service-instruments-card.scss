@@ -1,0 +1,106 @@
+@use '../common' as *;
+
+.service-instruments-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  padding: 24px;
+  border: 1px solid rgba($color-purple-light, 0.25);
+  border-radius: 16px;
+  background-color: rgba($color-white, 0.03);
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-instruments-card {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+}
+
+.service-instruments-card__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba($color-purple-light, 0.35);
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: 40px, 100% 100%;
+}
+
+.service-instruments-card__icon--figma {
+  background-image: url('@/images/instruments/figma.png'),
+    linear-gradient(to top, #090115 0%, #160f2b 100%);
+}
+
+.service-instruments-card__icon--photoshop {
+  background-image: url('@/images/instruments/photoshop.png'),
+    linear-gradient(to top, #090115 0%, #160f2b 100%);
+}
+
+.service-instruments-card__icon--ae {
+  background-image: url('@/images/instruments/ae.png'),
+    linear-gradient(to top, #090115 0%, #160f2b 100%);
+}
+
+.service-instruments-card__icon--3d {
+  background-image: url('@/images/instruments/3d.png'),
+    linear-gradient(to top, #090115 0%, #160f2b 100%);
+}
+
+.service-instruments-card__title {
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-instruments-card__title {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
+
+.service-instruments-card__lead {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.57;
+  color: $color-text-muted;
+}
+
+.service-instruments-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-instruments-card__list-item {
+  position: relative;
+  padding-left: 14px;
+  font-size: 14px;
+  line-height: 1.57;
+  color: $color-text-muted;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $color-purple;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: $breakpoint-md-max) {
+  .service-instruments-card__list-item {
+    font-size: 13px;
+    line-height: 1.54;
+  }
+}
